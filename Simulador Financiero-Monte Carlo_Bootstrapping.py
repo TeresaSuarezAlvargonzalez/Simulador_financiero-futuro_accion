@@ -220,7 +220,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
             width_mc, height_mc = calc_size(width_global)
             fig_mc = go.Figure()
             for i in range(min(100, n_simulaciones)):
-                color = 'cian' if simulaciones[i, -1] > precio_inicial else 'red'
+                color = 'lightgreen' if simulaciones[i, -1] > precio_inicial else 'red'
                 fig_mc.add_trace(go.Scatter(
                     y=simulaciones[i, :],
                     mode='lines',
