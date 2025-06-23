@@ -220,7 +220,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
             width_mc, height_mc = calc_size(width_global)
             fig_mc = go.Figure()
             for i in range(min(100, n_simulaciones)):
-                color = 'blue' if simulaciones[i, -1] > precio_inicial else 'red'
+                color = 'green' if simulaciones[i, -1] > precio_inicial else 'red'
                 fig_mc.add_trace(go.Scatter(
                     y=simulaciones[i, :],
                     mode='lines',
@@ -273,7 +273,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
             width_bs, height_bs = calc_size(width_global)
             fig_bs = go.Figure()
             for i in range(min(100, n_bootstrap)):
-                color = 'blue' if bootstrap_paths[i, -1] > precio_inicial else 'red'
+                color = 'green' if bootstrap_paths[i, -1] > precio_inicial else 'red'
                 fig_bs.add_trace(go.Scatter(
                     y=bootstrap_paths[i, :],
                     mode='lines',
