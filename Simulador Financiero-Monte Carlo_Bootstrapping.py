@@ -273,7 +273,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
             width_bs, height_bs = calc_size(width_global)
             fig_bs = go.Figure()
             for i in range(min(100, n_bootstrap)):
-                color = 'green' if bootstrap_paths[i, -1] > precio_inicial else 'red'
+                color = 'lightgreen' if bootstrap_paths[i, -1] > precio_inicial else 'red'
                 fig_bs.add_trace(go.Scatter(
                     y=bootstrap_paths[i, :],
                     mode='lines',
