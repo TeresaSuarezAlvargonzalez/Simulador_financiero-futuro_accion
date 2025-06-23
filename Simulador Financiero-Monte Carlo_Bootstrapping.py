@@ -47,9 +47,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
                 showlegend=False
             )
 
-            col1, col2, col3 = st.columns([1,6,1])
-            with col2:
-                st.plotly_chart(fig, use_container_width=False)
+            st.plotly_chart(fig, use_container_width=False)
 
             # Precio máximo, mínimo y último día
             precio_max = float(data.max())
@@ -91,7 +89,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
                 x=x,
                 y=pdf,
                 mode='lines',
-                line=dict(color='white', width=3),
+                line=dict(color='yellow', width=3),
                 name=f'Normal ajustada μ={mu:.4f}, σ={std:.4f}'
             ))
 
