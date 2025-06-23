@@ -242,8 +242,8 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
                 yaxis_title='Precio Simulado',
                 width=width_mc,
                 height=height_mc,
-                paper_bgcolor='black',
-                plot_bgcolor='black',
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
                 font=dict(color='white'),
                 margin=dict(t=50, b=50, l=40, r=40),
                 autosize=False
@@ -295,8 +295,8 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
                 yaxis_title='Precio Simulado',
                 width=width_bs,
                 height=height_bs,
-                paper_bgcolor='black',
-                plot_bgcolor='black',
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
                 font=dict(color='white'),
                 margin=dict(t=50, b=50, l=40, r=40),
                 autosize=False
