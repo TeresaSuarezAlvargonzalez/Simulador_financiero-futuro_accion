@@ -15,8 +15,6 @@ def calc_size(width=1000, ratio=2/4):
     height = int(width * ratio)
     return width, height
 
-
-
 # Sidebar para parámetros
 st.sidebar.header("Parámetros del Activo")
 ticker = st.sidebar.text_input("Introduce el ticker (ej: AAPL, GOOG, MSFT)", value="GOOG")
@@ -193,10 +191,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
                 autosize=False
             )
 
-
-            col_left, col_center, col_right = st.columns([1,6,1])
-            with col_center:
-                st.plotly_chart(fig_hist, use_container_width=False)
+            st.plotly_chart(fig_hist, use_container_width=False)
 
             # Simulación Monte Carlo
             st.subheader("🎲 Simulación Monte Carlo de precios futuros (log-normal)")
